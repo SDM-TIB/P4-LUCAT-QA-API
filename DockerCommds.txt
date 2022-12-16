@@ -1,0 +1,13 @@
+Build the image:
+docker build -t sdmtib/p4lucat_qa_cui_api:latest .
+
+
+
+
+Push the image:
+docker push sdmtib/p4lucat_qa_cui_api:latest
+
+
+
+Pull and run the image:
+docker run -d --name p4lucat_qa_cui_api -p 5103:5000 -e ENDPOINT='http://node2.research.tib.eu:8893/sparql' sdmtib/p4lucat_qa_cui_api:latest
